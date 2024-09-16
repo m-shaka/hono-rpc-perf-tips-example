@@ -1,0 +1,14 @@
+{
+  "name": "@repo/client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "@repo/server": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.2"
+  }
+}

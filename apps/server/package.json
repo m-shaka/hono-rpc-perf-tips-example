@@ -1,0 +1,25 @@
+{
+  "name": "@repo/server",
+  "exports": {
+    "./hc": {
+      "import": {
+        "default": "./dist/hc.js",
+        "types": "./dist/hc.d.ts"
+      }      
+    }
+  },
+  "scripts": {
+    "dev": "pnpm --filter @repo/server --parallel \"/^dev:.*/\"",
+    "dev:tsc": "tsc -p tsconfig.build.json --watch",
+    "dev:wrangler": "wrangler dev src/index.ts",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "dependencies": {
+    "hono": "^4.6.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240529.0",
+    "typescript": "^5.6.2",
+    "wrangler": "^3.57.2"
+  }
+}
